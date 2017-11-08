@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XQ6-En-OSg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="ky4-bW-Jl6">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="XQ6-En-OSg" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XmD-f9-DNm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Be9-Dt-TfA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="591"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMW-CU-OiI">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Find Me" id="PSN-dl-Z6k">
+                                        <connections>
+                                            <action selector="btnFindMe:" destination="XQ6-En-OSg" id="auG-Sg-8aV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vXx-mg-9wW" firstAttribute="bottom" secondItem="Be9-Dt-TfA" secondAttribute="bottom" constant="56" id="Bn2-uE-Mdf"/>
+                            <constraint firstItem="LMW-CU-OiI" firstAttribute="trailing" secondItem="vXx-mg-9wW" secondAttribute="trailing" id="D88-Wf-q54"/>
+                            <constraint firstItem="Be9-Dt-TfA" firstAttribute="top" secondItem="vXx-mg-9wW" secondAttribute="top" id="NhG-5O-Ybf"/>
+                            <constraint firstItem="LMW-CU-OiI" firstAttribute="bottom" secondItem="vXx-mg-9wW" secondAttribute="bottom" id="RGH-Iz-vkf"/>
+                            <constraint firstItem="Be9-Dt-TfA" firstAttribute="leading" secondItem="vXx-mg-9wW" secondAttribute="leading" id="T92-n6-DU4"/>
+                            <constraint firstItem="Be9-Dt-TfA" firstAttribute="trailing" secondItem="vXx-mg-9wW" secondAttribute="trailing" id="htR-hU-ThX"/>
+                            <constraint firstItem="LMW-CU-OiI" firstAttribute="leading" secondItem="vXx-mg-9wW" secondAttribute="leading" id="wJt-X2-A78"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vXx-mg-9wW"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Be9-Dt-TfA" id="xCT-EZ-gqM"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jzk-HR-kdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-549.60000000000002" y="39.130434782608695"/>
         </scene>
     </scenes>
 </document>

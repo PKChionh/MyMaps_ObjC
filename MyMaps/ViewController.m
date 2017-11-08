@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Initialize Map
+    self.mapView.mapType = MKMapTypeHybrid;
+    self.mapView.delegate = self;
+    self.mapView.showsUserLocation = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +28,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)btnFindMe:(id)sender
+{
+    // Retrieve current user location
+    MKUserLocation *userLocation = self.mapView.userLocation;
+    
+    // Define region to zoom in
+    // The 2 numbers represent the width/height of region (in meters)
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 500, 500);
+    
+    // Set region to MapView
+    [self.mapView setRegion:region animated:YES];
 }
-*/
-
 @end
