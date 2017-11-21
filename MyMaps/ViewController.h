@@ -12,7 +12,25 @@
 @interface ViewController : UIViewController <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) MKMapItem *destination;
 
 - (IBAction)btnFindMe:(id)sender;
 
+- (IBAction)btnGoChangi:(id)sender;
+- (IBAction)btnClearOverlay:(id)sender;
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
