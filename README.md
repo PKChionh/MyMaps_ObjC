@@ -3,6 +3,11 @@ Create a MapView with Region on iOS 9 (Objective C)
 
 This is an example app to create a MapView with Region on iOS devices.
 
+Features:
+- Find user's current location
+- Zoom in to specified region
+- Plot a turn-by-turn navigational route to Changi Airport
+
 This example is presented in Chapter 2 “GeoLocation”, as part of IT5302FPR Mobile Solutions Development module. 
 
 This project is tested on Xcode 9.0 or later, and iOS 11 (Objective C), although it should work for iOS 7, 8, 9 as well 
