@@ -7,6 +7,7 @@ Features:
 - Find user's current location
 - Zoom in to specified region
 - Plot a turn-by-turn navigational route to Changi Airport
+- Custom annotations and callouts
 
 This example is presented in Chapter 2 “GeoLocation”, as part of IT5302FPR Mobile Solutions Development module. 
 
